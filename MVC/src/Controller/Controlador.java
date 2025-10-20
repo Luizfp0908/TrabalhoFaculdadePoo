@@ -166,7 +166,7 @@ public class Controlador {
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
             stmt.setString(1, produto.getNome());
-            stmt.setInt(2, produto.getQuantidade()); // Mapeado para Quantidade
+            stmt.setInt(2, produto.getQuantidade()); 
             stmt.setDouble(3, produto.getPreco());
 
             return stmt.executeUpdate() > 0;
@@ -190,7 +190,7 @@ public class Controlador {
                 Modelo m = new Modelo();
                 m.setId(rs.getInt("id"));
                 m.setNome(rs.getString("nome"));
-                m.setQuantidade(rs.getInt("quantidade")); // Mapeado para Quantidade
+                m.setQuantidade(rs.getInt("quantidade")); 
                 m.setPreco(rs.getDouble("preco"));
 
                 produtos.add(m);
